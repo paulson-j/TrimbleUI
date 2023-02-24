@@ -1,10 +1,10 @@
 import React, {useEffect,useState} from "react";
 import { Navigationbar } from "./Navigatonbar";
-import { Driver } from "./Driver";
+import { Order } from "./Order";
 import jwt_decode from 'jwt-decode'
 import { Footer } from "./Footer";
 
-export function Home(){
+export function Orderpage(){
     const [credentials, setCredentials] = useState();
    
     useEffect(() => {
@@ -23,16 +23,12 @@ export function Home(){
 
     return (
         <>
-          {/* <Navigationbar></Navigationbar> */}
-            {/* <img class="profile" src={credentials} alt="image here"/> */}
-            {/* <Driver></Driver>
-            <Footer></Footer> */}
             <Navigationbar></Navigationbar>
-            <div className="add-driver">
-            <h2 className="fa"><strong> Add </strong><span class="text-muted">Driver <div className="fa-solid fa-user-plus"></div></span></h2>
-            </div>
-            <Driver></Driver>
-            <div className="add-driver-end"></div>
+            {/* <div className="add-driver">
+            <h2 className="fa"><strong> Add </strong><span class="text-muted">Order <div className="fa-solid fa-user-plus"></div></span></h2>
+            </div> */}
+            <Order></Order>
+            {/* <div className="add-driver-end"></div> */}
 
             <Footer></Footer>
 

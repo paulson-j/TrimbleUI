@@ -4,7 +4,7 @@ import { Driver } from "./Driver";
 import jwt_decode from 'jwt-decode'
 import { Footer } from "./Footer";
 
-export function Home(){
+export function Driverpage(){
     const [credentials, setCredentials] = useState();
    
     useEffect(() => {
@@ -23,10 +23,6 @@ export function Home(){
 
     return (
         <>
-          {/* <Navigationbar></Navigationbar> */}
-            {/* <img class="profile" src={credentials} alt="image here"/> */}
-            {/* <Driver></Driver>
-            <Footer></Footer> */}
             <Navigationbar></Navigationbar>
             <div className="add-driver">
             <h2 className="fa"><strong> Add </strong><span class="text-muted">Driver <div className="fa-solid fa-user-plus"></div></span></h2>

@@ -1,7 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import logo from "C:\\Users\\paulsoj\\React\\project-demo\\src\\asserts\\logo.svg";
+import jwt_decode from 'jwt-decode'
 
 export function Navbar(){
+
+  const [credentials, setCredentials] = useState();
+   
+    useEffect(() => {
+        const storedCredentials = localStorage.getItem('user');
+        if (storedCredentials) {
+          setCredentials((storedCredentials));
+        }
+        let webToken=storedCredentials.substring(storedCredentials.indexOf(':')+1,storedCredentials.indexOf(','));
+        
+        console.log(webToken);
+        var decoded = jwt_decode(webToken);
+        setCredentials(decoded['picture'])
+
+      }, []);
+
     return(
         <nav>
         <div class="logo">
@@ -16,7 +33,9 @@ export function Navbar(){
             </ul>
         </div>
         <div class="logout">
-          <button>logout</button>
+          <img class="profile" src={credentials} alt="image here"/>
+
+          <button class="logout-btn">logout</button>
         </div>
       </nav>
        

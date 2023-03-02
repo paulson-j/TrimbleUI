@@ -1,22 +1,25 @@
-import React from 'react';
-import { GoogleLogin } from '@react-oauth/google';
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
-    const navigate=useNavigate()
-    const responseMessage = (response) => {
-        localStorage.setItem("user",JSON.stringify(response));
-        console.log(response)
-        navigate('/home')
+import { GoogleLogin } from '@react-oauth/google';
+
+export function Login() {
+
+    const navigate = useNavigate()
+    const responseMessage = (response) =>{
+        localStorage.setItem("user",JSON.stringify(response))
+        navigate('/driver')
     };
-    const errorMessage = (error) => {
+
+    const errormessage = (error)=>{
         console.log(error);
-    };
-    return (
-        <div>
-            <br />
-            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
-        </div>
-    )
+    }
+
+
+    return ( 
+        <>
+        <GoogleLogin onSuccess={responseMessage} onError={errormessage}></GoogleLogin>
+        </>
+     );
 }
-export default Login;
+

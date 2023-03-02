@@ -18,4 +18,168 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+.trimble-color{
+  background-color: #0063A3;
+  color: white;
+}
+.trimble-btncolor{
+  background-color: #0063A3 !important;
+  color: white;
+}
+.trimble-btncolor:hover{
+  background-color: #0073c0 !important;
+  color: white;
+  box-shadow: 1px 1px 5px 1px grey;
+}
+.trimble-text{
+  color: #0063A3 !important;
+}
 
+.trimble-dark{
+  background-color: rgb(36, 32, 32);
+  color: white;
+}
+
+.dark1{
+  background-color: black;
+}
+.dark2{
+  background-color: blue;
+}
+.dark3{
+  background-color: red;
+}
+/* Footer css strats */
+
+/* Footer css ends */
+
+/* navigaton bar css starts here */
+.nav-colorwhite{
+  color: red !important;
+  background-color: black;
+}
+.nav-link{
+  color: white !important;
+  /* margin: 0 10px !important; */
+}
+.nav-item a:hover, .active , .active .nav-link{
+  color: black !important;
+  background-color: white ;
+}
+.navbar-toggler{
+  color: white !important;
+  border: 1px solid white;
+}
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.profile-img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.dropdown-menu .dropdown-item:hover{
+  background-color:black;
+  color: white !important;
+}
+/* navigation css ends here */
+/* Form css starts here */
+.btn-trimble:hover{
+  background: #0073c0;
+  color: white;
+  box-shadow: 1px 1px 5px 1px grey;
+
+}
+.must{
+  color: red;
+}
+.optional{
+  color: grey;
+}
+/* Form css ends here */
+/* Landing page css starts here */
+.land-title{
+  color: #0063A3;
+}
+.underline{
+  background-color: #0063A3;
+  width: 30%;
+  margin-left: 5px;
+  height: 5px;
+}
+.underline2{
+  background-color: #0063A3;
+  width: 30%;
+  margin-left: 5px;
+  height: 5px;
+}
+.underline3{
+  background-color: #0063A3;
+  width: 30%;
+  margin-left: 5px;
+  height: 5px;
+}
+/* Landing page css ends here */
+
+/* Driver details page css starts here */
+.fa-pencil{
+  color: black !important;
+}
+.fa-pencil:hover, .fa-trash:hover{
+  color: white !important;
+}
+.card .key{
+  font-size: large;
+  color: grey;
+}
+.card .value{
+  font-size: large;
+  font-weight: 600;
+  color: #0063A3;
+}
+
+/* card pop up */
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.close{
+  position: absolute;
+  top:30px;
+  right: 30px;
+  font-size: larger;
+  color: white;
+  border: none;
+  background-color: #0063A3;
+}
+
+.card .key .text-muted{
+  font-size: x-small;
+  color: grey;
+}
+/* card popup end here */
+
+/* vieew order starts here */
+.container .border-grey{
+  transition: .8s;
+
+}
+.container .border-grey:hover{
+
+  background-color: #0063A3;
+  color: white;
+
+}
+.dropdown-menu .item{
+  margin-left: 10px;
+}

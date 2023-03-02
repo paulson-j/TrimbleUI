@@ -1,22 +1,24 @@
-import {Home} from './components/Home'
-import './App.css';
-import Landing from './components/Landing';
-import {Routes, Route } from "react-router-dom";
-import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import {Driverpage} from './pages/Driverpage';
+import {Landingpage} from './pages/Landingpage';
+import {Viewdriverspage} from './pages/Viewdriverspage'
+import {Orderpage} from './pages/Orderpage'
+import {Aboutpage} from './pages/Aboutpage';
+import { Vieworderspage } from './pages/Vieworderspage';
 
 function App() {
- 
   return (
-    <div className="App">
+    <div>
+      <Routes>
+        <Route path='/' element={<Landingpage/>}></Route>
+        <Route path='/driver' element={<Driverpage/>}></Route>
+        <Route path='/assignorder' element={<Orderpage/>}></Route>
+        <Route path='/viewdrivers' element={<Viewdriverspage/>}></Route>
+        <Route path='/about' element={<Aboutpage/>}></Route>
+        <Route path='/vieworders' element={<Vieworderspage/>}></Route>
+        
+      </Routes>
       
-
-    <Routes>
-    <Route path='/' element={<Landing></Landing>}></Route>
-    <Route path='/home' element={<Home></Home>}></Route>
-    {/* <Route path='/demo' element={<Demo></Demo>}></Route> */}
-    </Routes>
-
-
     </div>
   );
 }

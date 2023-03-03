@@ -16,6 +16,7 @@ function App() {
         <Route path='/viewdrivers' element={<Viewdriverspage/>}></Route>
         <Route path='/about' element={<Aboutpage/>}></Route>
         <Route path='/vieworders' element={<Vieworderspage/>}></Route>
+        <Route path='*' element={<Landingpage/>}></Route>
         
       </Routes>
       

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import logo from 'C:\\Users\\paulsoj\\React\\transportfeb24\\src\\asserts\\TrimbleR-Horiz-RGB-White.svg'
 // import {Navigationbar} from '../components/Navigationbar';
@@ -7,6 +7,11 @@ import {Login} from '../components/Login'
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 export function Landingpage(){
+    
+useEffect(()=>{
+    localStorage.removeItem('user')
+},[])
+
     return (
         <>
             {/* <Navigationbar></Navigationbar> */}

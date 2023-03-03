@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import logo from 'C:\\Users\\paulsoj\\React\\transportfeb24\\src\\asserts\\TrimbleR-Horiz-RGB-White.svg'
 import jwt_decode from 'jwt-decode';
-import navlogo from 'C:\\Users\\paulsoj\\React\\transportfeb24\\src\\asserts\\logo.svg'
+import { useNavigate } from 'react-router-dom';
 
 export function Navigationbar() {
   const [credential,setCredential] = useState();
+  const navigate = useNavigate()
+
 
   useEffect(()=>{
+
     const storedCredentials = localStorage.getItem('user');
+ 
     if(storedCredentials){
       setCredential(storedCredentials);
+    }else{
+        navigate('/')
+        return;
     }
     let webToken = storedCredentials.substring(storedCredentials.indexOf(':')+1,storedCredentials.indexOf(','));
 
@@ -18,6 +25,12 @@ export function Navigationbar() {
     setCredential(decoded['picture']);
     console.log(credential)
   },[])
+
+  const logout = () =>{
+    localStorage.removeItem('user');
+  }
+
+
     return ( 
         
         <>
@@ -59,7 +72,7 @@ export function Navigationbar() {
         <img className='profile-img m-2' src={credential} alt="Image" /> 
                     </li>
         <li className='nav-item '>
-                        <a href="/" className='nav-link p-2 m-1'>Logout</a>
+                        <a href="/" onClick={logout} className='nav-link p-2 m-1'>Logout</a>
                     </li>
                 </ul>
                 {/* <ul className='navbar-nav'><img className='profile-img m-2' src={credential} alt="Image" /> 
